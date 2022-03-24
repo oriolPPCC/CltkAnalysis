@@ -1,21 +1,39 @@
 # Installation Set-up:
 from cltk import NLP
+#from cltk.tokenize.sentence import TokenizeSentence 
 import os
 from unicodedata import normalize
-#bondia
+import nltk
+#nltk.download('punkt')
+from nltk.corpus import reuters
+from nltk import sent_tokenize
+from nltk.tokenize import *
+from nltk.corpus import stopwords
+from nltk import FreqDist
+from nltk import bigrams
+
 def analitzar (txt):
-    #cltk_nlp = NLP(language="lat")
-    #cltk_doc = cltk_nlp.analyze(text=txt)
-    #cltk_tokens = (cltk_doc.tokens)
+    #txt = "Aspiciebam in visu noctis et ecce: viri tres diverso tramite venientes coram me astiterunt, quos ego statim iuxta visionis modum, cuius sint professionis vel cur ad me venerint, interrogo."
+    txt = "Aspiciebam in visu noctis et ecce: viri tres diverso tramite"
+    #manual_tok = word_tokenize(txt)
+    #print(manual_tok[0:5])
+
+    #tokenizer = TokenizeSentence('latin')
+    #sentence_tokens = tokenizer.tokenize_sentences(txt)
+    cltk_nlp = NLP(language="lat")
+    #print("estic entrant a l'analisi")
+    cltk_doc = cltk_nlp.analyze(txt)
+    #print("estic be :D")
+    print (cltk_doc)
+    #cltk_tokens = (txt)
     #....
-    print(txt)
+    #print(txt)
+    #print (cltk_tokens)
 
 def buscar_textos(path, all_files):
     for it in all_files:
         path_aux = path + "/" + it 
-        if ".git" in it:
-            print("Atenció aquest va malament: " + path_aux)
-        elif ".txt" in it:
+        if ".txt" in it:
             text = llegir(path_aux)
             print(path_aux)
             analitzar(text)
@@ -30,8 +48,12 @@ def llegir (path):
         test_1 = f.read()
         return test_1 
 
-path = "../cltk_data/lat/text/lat_text_latin_library"
+
+#main 
+path = "../cltk_data_test"
+#path = "../cltk_data/lat/text/lat_text_latin_library"
 all_files = os.listdir(path)
+#recorre sequencialment tots els documents
 buscar_textos(path, all_files)
 #print(all_files)
 
