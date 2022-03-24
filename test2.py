@@ -23,7 +23,7 @@ def analitzar (txt):
     cltk_nlp = NLP(language="lat")
     #print("estic entrant a l'analisi")
     cltk_doc = cltk_nlp.analyze(txt)
-    #print("estic be :D")
+  
     print (cltk_doc)
     #cltk_tokens = (txt)
     #....
