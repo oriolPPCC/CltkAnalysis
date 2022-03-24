@@ -50,7 +50,7 @@ def llegir (path):
 
 
 #main 
-path = "../cltk_data_test"
+path = "../cltk_data"
 #path = "../cltk_data/lat/text/lat_text_latin_library"
 all_files = os.listdir(path)
 #recorre sequencialment tots els documents
