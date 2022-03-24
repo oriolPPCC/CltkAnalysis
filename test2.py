@@ -2,7 +2,7 @@
 from cltk import NLP
 import os
 from unicodedata import normalize
-
+#bondia
 def analitzar (txt):
     #cltk_nlp = NLP(language="lat")
     #cltk_doc = cltk_nlp.analyze(text=txt)
