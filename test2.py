@@ -16,7 +16,7 @@ def analitzar (txt):
     #txt = "Aspiciebam in visu noctis et ecce: viri tres diverso tramite venientes coram me astiterunt, quos ego statim iuxta visionis modum, cuius sint professionis vel cur ad me venerint, interrogo."
     txt = "Aspiciebam in visu noctis et ecce: viri tres diverso tramite"
     #manual_tok = word_tokenize(txt)
-    #print(manual_tok[0:5])
+ 
 
     #tokenizer = TokenizeSentence('latin')
     #sentence_tokens = tokenizer.tokenize_sentences(txt)
